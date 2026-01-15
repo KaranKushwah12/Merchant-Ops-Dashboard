@@ -1,0 +1,122 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #f4f6f8;
+  color: #1f2937;
+  line-height: 1.5;
+}
+
+/* using this css in the dashboard and merchants pages */
+.page {
+  padding: 24px;
+}
+
+.page h2 {
+  font-size: 1.375rem;
+  margin-bottom: 20px;
+}
+
+/* media queries -  for responsiveness */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .page {
+    padding: 20px;
+  }
+
+  .controls {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .controls {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .controls input:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .controls select option {
+    font-size: 10px;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 16px;
+    background: #ffffff;
+    flex-direction: column;
+    width: 180px;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links button {
+    width: 100%;
+    text-align: left;
+  }
+  .table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .merchant-table {
+    width: 100%;
+    min-width: 900px;
+    border-collapse: collapse;
+  }
+
+  .merchant-table th,
+  .merchant-table td {
+    padding: 12px;
+    text-align: left;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 15px;
+  }
+  .controls {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .topbar {
+    font-size: 0.95rem;
+  }
+
+  .card h3 {
+    font-size: 1.25rem;
+  }
+}

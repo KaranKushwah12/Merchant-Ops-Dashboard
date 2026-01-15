@@ -1,0 +1,35 @@
+.sidebar {
+  width: 240px;
+  background: #0f172a;
+  color: #ffffff;
+  padding: 20px;
+}
+
+.sidebar h3 {
+  font-size: 1.125rem;
+  margin-bottom: 24px;
+}
+
+.sidebar button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: none;
+  background: transparent;
+  color: #cbd5f5;
+  text-align: left;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.sidebar button:hover {
+  background: #1e293b;
+  color: #ffffff;
+}
+
+.sidebar button.active {
+  background: #2563eb;
+  color: #ffffff;
+}
